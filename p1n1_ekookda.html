@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="keywords" content="tugas"></meta>
+  <title>Form Pendaftaran</title>
+</head>
+<body>
+  <!-- form akun anggota -->
+  <form action="daftar.php" method="post" id="form" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Akun Anggota</legend>
+      <table>
+        <tr>
+          <td><label for="username">Username</label></td>
+          <td><input type="text" id="username" name="name" autocomplete="off" min="6" required="required" pattern="[a-z]{6}" placeholder="minimal 6 huruf kecil" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="email" name="email" id="email" required="required" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td><input type="password" id="password" name="pass" required="required" pattern="[A-Za-z0-9]{3}" title="minimal 6 karakter" /></td>
+        </tr>
+        <tr>
+          <td><label for="confirm-pass">Konfirmasi Password</label></td>
+          <td><input type="password" id="confirm-pass" name="confirmpass" required="required" /></td>
+        </tr>
+        <tr>
+          <td><label for="avatar">Avatar</label></td>
+          <td><input type="file" name="avatar" src="" accept="image/*" /></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Biodata</legend>
+      <table>
+        <tr>
+          <td><label for="nama">Nama</label></td>
+          <td><input type="text" name="nama" placeholder="Nama" required="required" /></td>
+        </tr>
+        <tr>
+          <td><label for="alamat">Alamat</label></td>
+          <td><textarea name="alamat" rows="8" cols="40" placeholder="Alamat"></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="kodepos">Kodepos</label></td>
+          <td><input type="text" name="kodepos" placeholder="contoh: 10150" required="required" pattern="[0-9]{5}" title="hanya angka, minimal 5 digit" /></td>
+        </tr>
+        <tr>
+          <td><label for="usia">Usia</label></td>
+          <td><input type="text" name="name" value=""></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Jenis Kelamin</label></td>
+          <td>
+            <input type="radio" name="gender" value="Laki-laki" checked="checked" />
+            <input type="radio" name="gender" value="Perempuan">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend>Konfigurasi</legend>
+      <table>
+        <tr>
+          <td><label for="tema">Tema</label></td>
+          <td>
+            <select name="tema">
+              <option value="elegant">Elegant</option>
+              <option value="office">Office</option>
+              <option value="bluesky">Bluesky</option>
+              <option value="simple">Simple</option>
+              <option value="modern">Modern</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="warna">Warna</label></td>
+          <td><input type="color" name="warna" /></td>
+        </tr>
+      </table>
+    </fieldset>
+    <input type="submit" name="btn-submit" value="daftar" />
+    <input type="submit" formaction="draft.php" name="btn-draft" value="tulisan draft" />
+  </form>
+</body>
+</html>
